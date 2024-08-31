@@ -2,6 +2,7 @@
 package com.apptware.interview.immutability;
 
 import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
