@@ -2,14 +2,26 @@
 package com.apptware.interview.immutability;
 
 import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@Getter
 @AllArgsConstructor
 public class Student {
-  private String name;
-  private Date dateOfBirth;
-  private List<String> courses;
+  private final String name;
+  private final Date dateOfBirth;
+  private final List<String> courses;
+
+  public String getName(){
+    return this.name;
+  }
+
+  public Date getDateOfBirth(){
+    return new Date(dateOfBirth.getTime());
+  }
+
+  public List<String> getCourses(){
+    return new ArrayList<>(courses);
+  }
 }
